@@ -3,7 +3,7 @@
 <h2>Practices:</h2>
 
 <ol>
-<li><a href="https://rangerjayce.github.io/CSIT121/Practice/demo.html">1. Demo</a></li>
+<li><a href="https://rangerjayce.github.io/CSIT121/Practice/demo.html">Demo</a></li>
 </ol>
 
 <h2>Labs:</h2>
