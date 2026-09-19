@@ -8,6 +8,7 @@
 
 <h2>Labs:</h2>
 
-<p>
-<a href="https://rangerjayce.github.io/CSIT121/Lab01/aboutme.html">1. Lab01</a>
-</p>
+<ol>
+<li> <a href="https://rangerjayce.github.io/CSIT121/Lab01/aboutme.html">Lab01</a> </li>
+<li> <a href="https://rangerjayce.github.io/CSIT121/Lab02/index.html">Lab02</a> </li>
+</ol>
