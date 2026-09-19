@@ -2,4 +2,4 @@
 CSIT121 class
 
 Practices:
-<a href="https://rangerjayce.github.io/CSIT121/practice/demo.html">1. Demo</a>
+<a href="https://github.com/RangerJayce/CSIT121/blob/main/Practice/demo.html">1. Demo</a>
