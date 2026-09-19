@@ -1,5 +1,4 @@
 # CSIT121
-<h1>CSIT121 class</h1>
 
 <h2>Practices:</h2>
 
