@@ -1,5 +1,28 @@
 body{
 
-    background-color:green;
+    background-color:#FFF0F5;
+    color:#9370DB;
+
+
+}
+
+h1, h2{
+
+    font-family:Papyrus;
+    color:#663399;
+
+}
+
+
+.p{
+
+    color:#DB7093;
+
+}
+
+#link{
+
+    font-weight: bold;
+    color:#FA8072;
 
 }
