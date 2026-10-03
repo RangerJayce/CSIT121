@@ -4,6 +4,7 @@
 
 <ol>
 <li><a href="https://rangerjayce.github.io/CSIT121/Practice/demo.html">Demo</a></li>
+ <li><a href = "https://github.com/RangerJayce/CSIT121/Practice/index.html">Bug Index</a></li>
 </ol>
 
 <h2>Labs:</h2>
