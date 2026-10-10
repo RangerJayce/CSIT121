@@ -13,5 +13,5 @@
 <li> <a href="https://rangerjayce.github.io/CSIT121/Lab01/aboutme.html">Lab01</a> </li>
 <li> <a href="https://rangerjayce.github.io/CSIT121/lab02/index.html">Lab02</a> </li>
 <li> <a href="https://rangerjayce.github.io/CSIT121/lab03/index2.html">Lab03</a> </li> 
-<li> <a href="https://rangerjayce.github.io/CSIT121lab04/lab4.html">Lab04</li>
+<li> <a href="https://rangerjayce.github.io/CSIT121/lab04/lab4.html">Lab04</li>
 </ol>
