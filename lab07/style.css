@@ -1,0 +1,18 @@
+tr:nth-child(even) {
+  background-color: rgba(0, 4, 255, 0.568);
+}
+
+th:nth-child(even),td:nth-child(even) {
+  background-color: rgba(182, 0, 0, 0.61);
+}
+
+td{
+
+    font-weight:bold;
+    border:1px solid black;
+
+}
+
+.form-group{
+    background:beige;
+}
