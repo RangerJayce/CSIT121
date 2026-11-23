@@ -18,7 +18,7 @@
 <li> <a href="https://rangerjayce.github.io/CSIT121/lab06/index.html">Lab06</a></li>
 <li> <a href="https://rangerjayce.github.io/CSIT121/lab07/tierlist.html">Lab07</a></li>
 <li> <a href="https://rangerjayce.github.io/CSIT121/lab08/lab4.html">Lab08</a></li>
-<li> <a href="https://rangerjayce.github.io/CSIT12/lab09/index.html">Lab08</a></li>
+<li> <a href="https://rangerjayce.github.io/CSIT121/lab09/index.html">Lab09</a></li>
 
 
 
