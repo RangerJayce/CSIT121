@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reads the XML data using JavaScript</title>
+
+    <!-- CSS -->
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            display: none;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #7ce2af;
+        }
+
+        th {
+            background-color: #7c0f65;
+            color: white;
+        }
+
+        .button {
+            position: relative;
+            text-align: center;
+            padding: 20px;
+            border: 4px solid rgb(55, 12, 211);
+            background: rgba(20, 192, 4, 0.5);
+            color: rgb(230, 36, 78);
+            outline: none;
+            border-radius: 30px;
+            font-size: 30px;
+            width: 500px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            color: black;
+            background: white;
+        }
+
+        .button-container {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="button-container">
+        <button type="button" id="toggleBtn" class="button">
+            Get Employee Data
+        </button>
+    </div>
+
+    <br><br>
+
+    <p id="message"></p>
+
+    <table id="employeeTable"></table>
+
+    <script>
+        let employeeDataLoaded = false;
+
+        // Load employee XML
+        let xmlhttp = new XMLHttpRequest();
+
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState === 4) {
+
+                if (this.status === 200) {
+
+                    let xmlDoc = this.responseXML;
+
+                    if (!xmlDoc) {
+                        document.getElementById("message").textContent =
+                            "Error: Unable to read employee.xml.";
+                        return;
+                    }
+
+                    generateTableHTML(xmlDoc);
+                    employeeDataLoaded = true;
+
+                    document.getElementById("message").textContent = "";
+
+                } else {
+                    document.getElementById("message").textContent =
+                        "Error loading employee.xml. Check that the file exists.";
+                }
+            }
+        };
+
+        xmlhttp.open("GET", "employee.xml", true);
+        xmlhttp.send();
+
+
+        // Generate employee table
+        function generateTableHTML(xmlDoc) {
+
+            let table = `<tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Title</th>
+                <th>Division</th>
+                <th>Building</th>
+                <th>Room</th>
+            </tr>`;
+
+            let employees = xmlDoc.getElementsByTagName("employee");
+
+            for (let i = 0; i < employees.length; i++) {
+
+                table += "<tr><td>" +
+                    employees[i].getElementsByTagName("firstname")[0].textContent +
+                    "</td><td>" +
+                    employees[i].getElementsByTagName("lastname")[0].textContent +
+                    "</td><td>" +
+                    employees[i].getElementsByTagName("title")[0].textContent +
+                    "</td><td>" +
+                    employees[i].getElementsByTagName("division")[0].textContent +
+                    "</td><td>" +
+                    employees[i].getElementsByTagName("building")[0].textContent +
+                    "</td><td>" +
+                    employees[i].getElementsByTagName("room")[0].textContent +
+                    "</td></tr>";
+            }
+
+            document.getElementById("employeeTable").innerHTML = table;
+        }
+
+
+        // Toggle employee data
+        document.getElementById("toggleBtn").addEventListener("click", function() {
+
+            let table = document.getElementById("employeeTable");
+            let button = document.getElementById("toggleBtn");
+
+            if (table.style.display === "table") {
+
+                table.style.display = "none";
+                button.textContent = "Get Employee Data";
+
+            } else {
+
+                if (!employeeDataLoaded) {
+                    document.getElementById("message").textContent =
+                        "Employee data has not loaded yet. Check employee.xml.";
+                    return;
+                }
+
+                table.style.display = "table";
+                button.textContent = "Close Employee Data";
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>
